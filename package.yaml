@@ -46,5 +46,6 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
+      - hashable
       - fp2-haskell
       - HUnit

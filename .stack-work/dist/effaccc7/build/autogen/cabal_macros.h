@@ -103,10 +103,10 @@
 #endif /* MIN_TOOL_VERSION_runghc */
 
 #ifndef CURRENT_PACKAGE_KEY
-#define CURRENT_PACKAGE_KEY "fp2-haskell-0.1.0.0-1CLs14WvigLJiVlV9ijfL4"
+#define CURRENT_PACKAGE_KEY "fp2-haskell-0.1.0.0-J0djpa4GdMwDXHSEDy9UhY"
 #endif /* CURRENT_packageKey */
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "fp2-haskell-0.1.0.0-1CLs14WvigLJiVlV9ijfL4"
+#define CURRENT_COMPONENT_ID "fp2-haskell-0.1.0.0-J0djpa4GdMwDXHSEDy9UhY"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

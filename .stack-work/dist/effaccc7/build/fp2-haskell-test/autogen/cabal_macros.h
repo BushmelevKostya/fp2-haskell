@@ -40,6 +40,16 @@
   (major1) == 0 && (major2) <  1 || \
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_fp2_haskell */
+/* package hashable-1.4.3.0 */
+#ifndef VERSION_hashable
+#define VERSION_hashable "1.4.3.0"
+#endif /* VERSION_hashable */
+#ifndef MIN_VERSION_hashable
+#define MIN_VERSION_hashable(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  4 || \
+  (major1) == 1 && (major2) == 4 && (minor) <= 3)
+#endif /* MIN_VERSION_hashable */
 
 /* tool gcc-14.0.6 */
 #ifndef TOOL_VERSION_gcc
@@ -113,7 +123,7 @@
 #endif /* MIN_TOOL_VERSION_runghc */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "fp2-haskell-0.1.0.0-DPDcDoYzgiCBUkc2I9GbiI-fp2-haskell-test"
+#define CURRENT_COMPONENT_ID "fp2-haskell-0.1.0.0-2HT7f2Dw6MK5jPy3OjzvQo-fp2-haskell-test"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"

@@ -1,5 +1,9 @@
 cabal-version: 2.2
 
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
 name:           fp2-haskell
 version:        0.1.0.0
 homepage:       https://github.com/githubuser/fp2-haskell#readme
@@ -15,9 +19,14 @@ extra-source-files:
 library
   exposed-modules:
       Lib
+      Main
+  other-modules:
+      Paths_fp2_haskell
+  autogen-modules:
+      Paths_fp2_haskell
   hs-source-dirs:
       src
-  ghc-options: -Wall
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
     , hashable
@@ -25,21 +34,34 @@ library
 
 executable fp2-haskell
   main-is: Main.hs
+  other-modules:
+      Lib
+      Paths_fp2_haskell
+  autogen-modules:
+      Paths_fp2_haskell
   hs-source-dirs:
       src
-  ghc-options: -Wall
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
     , containers
+    , fp2-haskell
     , hashable
+  default-language: Haskell2010
 
 test-suite fp2-haskell-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
+  other-modules:
+      Paths_fp2_haskell
+  autogen-modules:
+      Paths_fp2_haskell
   hs-source-dirs:
       test
-  ghc-options: -Wall
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       HUnit
     , base >=4.7 && <5
     , fp2-haskell
+    , hashable
+  default-language: Haskell2010

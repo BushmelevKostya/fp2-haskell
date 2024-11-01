@@ -1,4 +1,4 @@
-module Lib (createSet, SCSet, add, remove, mapValues, filterValues, currentSize, maxSize) where
+module Lib (createSet, SCSet, add, remove, mapValues, filterValues, addAll, getDataAsList, currentSize, maxSize, loadFactor, arrayData) where
 
 import GHC.Arr (Array, array, (!), (//), elems)
 import Data.Hashable (Hashable, hash)
@@ -95,3 +95,6 @@ filterValues predicate scset =
     let valuesList = concat (elems (arrayData scset))
         filteredValues = filter predicate valuesList
     in addAll filteredValues createSet 
+
+instance (Eq v, Hashable v) => Eq (SCSet v) where
+    s1 == s2 = getDataAsList s1 == getDataAsList s2

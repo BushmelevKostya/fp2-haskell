@@ -47,7 +47,7 @@ getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: 
 
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 bindir     = "C:\\Projects\\fp2-haskell\\.stack-work\\install\\91663cd9\\bin"
-libdir     = "C:\\Projects\\fp2-haskell\\.stack-work\\install\\91663cd9\\lib\\x86_64-windows-ghc-9.6.6\\fp2-haskell-0.1.0.0-1CLs14WvigLJiVlV9ijfL4"
+libdir     = "C:\\Projects\\fp2-haskell\\.stack-work\\install\\91663cd9\\lib\\x86_64-windows-ghc-9.6.6\\fp2-haskell-0.1.0.0-J0djpa4GdMwDXHSEDy9UhY"
 dynlibdir  = "C:\\Projects\\fp2-haskell\\.stack-work\\install\\91663cd9\\lib\\x86_64-windows-ghc-9.6.6"
 datadir    = "C:\\Projects\\fp2-haskell\\.stack-work\\install\\91663cd9\\share\\x86_64-windows-ghc-9.6.6\\fp2-haskell-0.1.0.0"
 libexecdir = "C:\\Projects\\fp2-haskell\\.stack-work\\install\\91663cd9\\libexec\\x86_64-windows-ghc-9.6.6\\fp2-haskell-0.1.0.0"

@@ -1,10 +1,16 @@
+C:\Projects\fp2-haskell\.stack-work\dist\effaccc7\build\fp2-haskell-test\autogen\Paths_fp2_haskell.hs:
+  hash: 4ddaa527c4688b32339b9a8a87983a803400033d352d495d3bf54bead70cc62b
+C:\Projects\fp2-haskell\.stack-work\dist\effaccc7\build\fp2-haskell-test\autogen\cabal_macros.h:
+  hash: 9419fb640041f8834943ee534f2c185338e24961fcbc2636d2ff31fe41006d15
 C:\Projects\fp2-haskell\CHANGELOG.md:
   hash: 91bda910b8f4d7e337a47f1a5f804d7fbfd44c47bb508ccbe1e2aebedbe0d171
 C:\Projects\fp2-haskell\README.md:
   hash: a9d13aeb8ea4428371dbff65b893f762f04639137f748b18d1116b7e72dc4d16
 C:\Projects\fp2-haskell\fp2-haskell.cabal:
-  hash: 19ae8a0848f223a3564d91f8339cd9e76ab4d4b9adbdaf5af3b99ae676b4a61a
+  hash: 23c504a9ef1e693e1370592e6b339bf9e1a2fc09e06eb2fb58455fda58d2562b
 C:\Projects\fp2-haskell\package.yaml:
-  hash: dded12ef1e79386a69f4cc7dbd8ac51e5aa879bd12e415b123faeb27dd2d8d0a
+  hash: 316fa2be84ed23e04c93f46e8124e75e5252c19ed851e59724d8c358a6614001
 C:\Projects\fp2-haskell\test\Spec.hs:
-  hash: f9ed95ef4e35c94d3ac051e14b993d8e967c02a98b9e6061f67d582433976536
+  hash: 78b2190f7799e5b4e5b110f0922ba2a9f4cc452a6df5038b70b0f7b339cd0f14
+C:\Users\kosti\AppData\Local\Programs\stack\x86_64-windows\ghc-9.6.6\lib\x86_64-windows-ghc-9.6.6\rts-1.0.2\include\ghcversion.h:
+  hash: 9032f6afc97dcddfe8c8b306639eb6f456e3f6667f3dd8268681f51bb77c8634

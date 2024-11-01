@@ -30,6 +30,16 @@
   (major1) == 0 && (major2) <  6 || \
   (major1) == 0 && (major2) == 6 && (minor) <= 7)
 #endif /* MIN_VERSION_containers */
+/* package fp2-haskell-0.1.0.0 */
+#ifndef VERSION_fp2_haskell
+#define VERSION_fp2_haskell "0.1.0.0"
+#endif /* VERSION_fp2_haskell */
+#ifndef MIN_VERSION_fp2_haskell
+#define MIN_VERSION_fp2_haskell(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  1 || \
+  (major1) == 0 && (major2) == 1 && (minor) <= 0)
+#endif /* MIN_VERSION_fp2_haskell */
 /* package hashable-1.4.3.0 */
 #ifndef VERSION_hashable
 #define VERSION_hashable "1.4.3.0"
@@ -113,7 +123,7 @@
 #endif /* MIN_TOOL_VERSION_runghc */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "fp2-haskell-0.1.0.0-J0djpa4GdMwDXHSEDy9UhY-fp2-haskell"
+#define CURRENT_COMPONENT_ID "fp2-haskell-0.1.0.0-EtPJpbHpI2CLhS9cJDJrXV-fp2-haskell"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"
