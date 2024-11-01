@@ -77,7 +77,7 @@ instance Foldable SCSet where
 
 instance (Hashable v, Eq v) => Semigroup (SCSet v) where
     (SCSet size1 maxSize1 loadFactor1 arr1) <> (SCSet size2 maxSize2 loadFactor2 arr2) =
-        let newArr = foldr add (SCSet 0 (max maxSize1 maxSize2) loadFactor1 (array (0, (max maxSize1 maxSize2) - 1) [(i, []) | i <- [0..(max maxSize1 maxSize2) - 1]])) (getDataAsList (SCSet size1 maxSize1 loadFactor1 arr1))
+        let newArr = foldr add (SCSet 0 (max maxSize1 maxSize2) loadFactor1 (array (0, max maxSize1 maxSize2 - 1) [(i, []) | i <- [0..max maxSize1 maxSize2 - 1]])) (getDataAsList (SCSet size1 maxSize1 loadFactor1 arr1))
             in foldr add newArr (getDataAsList (SCSet size2 maxSize2 loadFactor2 arr2))
 
 instance (Hashable v, Eq v) => Monoid (SCSet v) where
