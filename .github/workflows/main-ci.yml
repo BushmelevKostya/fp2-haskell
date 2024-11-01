@@ -24,6 +24,7 @@ jobs:
     - name: 'Set up HUnit'
       run: |
         stack install HUnit 
+        stack install QuickCheck
     - name: 'Run Tests'
       run:
         stack test

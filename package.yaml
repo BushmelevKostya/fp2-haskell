@@ -49,3 +49,4 @@ tests:
       - hashable
       - fp2-haskell
       - HUnit
+      - QuickCheck

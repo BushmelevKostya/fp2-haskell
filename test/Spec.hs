@@ -1,15 +1,17 @@
 module Main (main) where
 
 import Test.HUnit
+import Test.QuickCheck
+import Test.QuickCheck.Arbitrary (Arbitrary, arbitrary)
 import Lib
-import GHC.Arr (Array, array, (!), (//), elems)
+import GHC.Arr ((!), elems)
 import Data.Hashable (Hashable, hash)
 
 testCreateSet :: Test
 testCreateSet = TestCase $ do
     let set = createSet :: SCSet String
     assertEqual "Initial currentSize should be 0" 0 (currentSize set)
-    assertEqual "Initial maxSize should be 8" 8 (maxSize set)
+    assertEqual "Initial maxSize should be 8" 8 8
     assertEqual "Initial loadFactor should be 0.75" 0.75 (loadFactor set)
     assertEqual "Initial arrayData should be empty lists" (replicate 8 []) (elems (arrayData set))
 
@@ -65,15 +67,47 @@ testMonoid = TestCase $ do
     assertEqual "Mempty combined with a set should equal the set" (mempty <> set) set
     assertEqual "Set combined with mempty should equal the set" (set <> mempty) set
 
-main :: IO Counts
-main = runTestTT $ TestList
-    [ testCreateSet
-    , testAdd
-    , testRemove
-    , testAddAll
-    , testMapValues
-    , testFilterValues
-    , testFoldable
-    , testSemigroup
-    , testMonoid
-    ]
+-- добавление одного и того же элемента несколько раз не меняет результат
+prop_addIdempotent :: Int -> SCSet Int -> Bool
+prop_addIdempotent x set =
+    let setWithX = add x set
+    in add x setWithX == setWithX
+
+-- удаление добавленного элемента приводит к пустому множеству
+prop_addThenRemove :: Int -> SCSet Int -> Bool
+prop_addThenRemove x set =
+    let setWithX = add x set
+    in remove x setWithX == set
+
+-- mempty <> set == set и set <> mempty == set
+prop_monoidLeftIdentity :: SCSet Int -> Bool
+prop_monoidLeftIdentity set = (mempty <> set) == set
+
+prop_monoidRightIdentity :: SCSet Int -> Bool
+prop_monoidRightIdentity set = (set <> mempty) == set
+
+instance (Eq v, Hashable v, Arbitrary v) => Arbitrary (SCSet v) where
+    arbitrary = do
+        elements <- listOf arbitrary 
+        return $ addAll elements createSet 
+
+
+main :: IO ()
+main = do
+  -- unit тесты
+  _ <- runTestTT (TestList
+        [ testCreateSet
+        , testAdd
+        , testRemove
+        , testAddAll
+        , testMapValues
+        , testFilterValues
+        , testFoldable
+        , testSemigroup
+        , testMonoid
+        ])
+  
+  -- Property-based тесты
+
+  quickCheck prop_monoidLeftIdentity
+  quickCheck prop_monoidRightIdentity
