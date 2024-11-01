@@ -1,4 +1,4 @@
-module Lib (createSet, SCSet, add, remove, mapValues, filterValues) where
+module Lib (createSet, SCSet, add, remove, mapValues, filterValues, currentSize, maxSize) where
 
 import GHC.Arr (Array, array, (!), (//), elems)
 import Data.Hashable (Hashable, hash)

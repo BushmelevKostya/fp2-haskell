@@ -2,9 +2,6 @@ module Main (main) where
 
 import Lib
 
-increment :: Int -> Int
-increment v = v + 1
-
 main :: IO ()
 main = do
   let
